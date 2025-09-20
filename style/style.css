@@ -6,6 +6,7 @@
 
 :root {
     --index: calc(1vw + 1vh);
+    --transition: cubic-bezier(.1, .7, 0, 1);
 }
 
 body {
@@ -33,6 +34,8 @@ body {
     background-position: center;
     cursor: pointer;
     filter: grayscale() brightness(.5);
+    transition: transform 1.25s var(--transition), filter 3s var(--transition);
+    will-change: transform, filter;
 }
 
 .items .item:hover {
