@@ -40,6 +40,18 @@ body {
     transform: translateZ(calc(var(--index) * 10))
 }
 
+.item::before, .item::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    right: calc(var(--index) * -1);
+}
+
+.item::after {
+    left: calc(var(--index) * -1);
+}
+
 /* Right side */
 
 .items .item:hover + * {
