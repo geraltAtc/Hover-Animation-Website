@@ -31,4 +31,5 @@ body {
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    filter: grayscale() brightness(.5);
 }
