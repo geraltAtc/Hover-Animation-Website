@@ -22,6 +22,7 @@ body {
 .items {
     display: flex;
     gap: 0.4rem;
+    perspective: calc(var(--index) * 35);
 }
 
 .item {
@@ -32,4 +33,9 @@ body {
     background-position: center;
     cursor: pointer;
     filter: grayscale() brightness(.5);
+}
+
+.items .item.active {
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 10))
 }
