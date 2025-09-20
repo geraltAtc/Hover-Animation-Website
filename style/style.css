@@ -35,32 +35,32 @@ body {
     filter: grayscale() brightness(.5);
 }
 
-.items .item.active {
+.items .item:hover {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 10))
 }
 
 /* Right side */
 
-.items .item.active + * {
+.items .item:hover + * {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 8.5));
     z-index: -1;
 }
 
-.items .item.active + * + * {
+.items .item:hover + * + * {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 5.6));
     z-index: -2;
 }
 
-.items .item.active + * + * + * {
+.items .item:hover + * + * + * {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 2.4));
     z-index: -3;
 }
 
-.items .item.active + * + * + * + * {
+.items .item:hover + * + * + * + * {
     filter: inherit;
     transform: translateZ(calc(var(--index) * .6));
     z-index: -4;
@@ -68,22 +68,22 @@ body {
 
 /* Left side */
 
-.items .item:has( + .active) {
+.items .item:has( + :hover) {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 8.5));
 }
 
-.items .item:has( + * + .active) {
+.items .item:has( + * + :hover) {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 5.6));
 }
 
-.items .item:has( + * + * + .active) {
+.items .item:has( + * + * + :hover) {
     filter: inherit;
     transform: translateZ(calc(var(--index) * 2.4));
 }
 
-.items .item:has( + * + * + * + .active) {
+.items .item:has( + * + * + * + :hover) {
     filter: inherit;
     transform: translateZ(calc(var(--index) * .6));
 }
