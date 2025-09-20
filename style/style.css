@@ -65,3 +65,25 @@ body {
     transform: translateZ(calc(var(--index) * .6));
     z-index: -4;
 }
+
+/* Left side */
+
+.items .item:has( + .active) {
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 8.5));
+}
+
+.items .item:has( + * + .active) {
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 5.6));
+}
+
+.items .item:has( + * + * + .active) {
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * 2.4));
+}
+
+.items .item:has( + * + * + * + .active) {
+    filter: inherit;
+    transform: translateZ(calc(var(--index) * .6));
+}
